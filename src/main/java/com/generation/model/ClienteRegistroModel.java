@@ -17,9 +17,13 @@ public class ClienteRegistroModel {
 	@Column(unique=true, nullable=false)
 	private String correo;
 	private String nombre;
-	@Column(nullable=false)
+	@Column(nullable=false, length=18)
 	private String contrasenia;
 	//getters and setters
+	//las realciones sean las que sean habra que colocarlas ejemplo
+	//@OnToMany(mappedBY = "cliente") <--aqui especifica de cliente  
+	//pivate List<Carrito> carrito; el tipo de dato es un list de carrito <--hacemos referencia al carrito
+	
 	public Integer getId() {
 		return id;
 	}
